@@ -27,3 +27,14 @@ is a solution that satisfies these constraints.
 
 ```
 ```
+
+## Solving a Board
+To solve a Sudoku board, the following steps need to be taken:
+
+#### Steps
+1. Open a terminal window on your computer.
+2. Navigate to the directory with the Sudoku solver code.
+3. Enter the following command: `make`
+4. Modify the _unsolved.txt_ file to reflect the board to solve.
+5. Run the Sudoku solver by entering the following command: `./soduku_solve unsolved.txt solved.txt`
+6. View the solution to your sudoku puzzle by opening the _solved.txt_ file
