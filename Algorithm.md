@@ -513,3 +513,19 @@ the Sudoku table with new values.
 #### Summary for Step 5
 - In 9-box 4, the top-row and middle column has a value of 5
 - In 9-box 8, the middle-row and middle column has a value of 6 
+
+#### Updated Sudoku Table and 9-Box Numbers
+
+```
+[0 0 0] [9 0 0] [0 0 2]
+[0 2 0] [0 1 0] [0 9 0]        0    1    2
+[0 9 0] [0 2 0] [0 0 4]
+ -----   -----   -----
+[9 5 0] [0 0 0] [0 4 7]
+[0 0 0] [2 0 1] [0 5 0]        3    4    5
+[0 0 1] [0 9 0] [0 0 0]
+ -----   -----   -----
+[0 6 0] [5 8 0] [0 0 1]
+[0 0 7] [0 3 2] [9 6 0]        6    7    8
+[1 0 0] [0 6 0] [0 8 0]
+```
