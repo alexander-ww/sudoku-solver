@@ -265,7 +265,7 @@ void SingleBox::erasePossibility(int index) {
  * This method accepts a single-box
  * instance as input and determines
  * whether that single-box instance is
- * equal to this single box instance. If
+ * equal to this single-box instance. If
  * the two instances are equal a value of
  * true is returned; Otherwise, a value of
  * false is returned.
