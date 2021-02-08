@@ -14,7 +14,9 @@ using namespace std;
  * to represent each of the individual
  * nine boxes that are contained within
  * a larger box of nine boxes.
+ * </p>
  *
+ * <p>
  * Each of these single boxes in the
  * Sudoku puzzle contain a numerical
  * value, a non-zero status indicator,
