@@ -150,7 +150,7 @@ void NineBox::update(int number, int singlebox) {
     for (int i = 0; i < singleBoxes.size(); i++) {
         for (int j = 0; j < possibilities.size(); j++) {
             if (possibilities[j] == 0) {
-                singleBoxes[i].setPossibilities(j);
+                singleBoxes[i].erasePossibility(j);
                 singleBoxes[i].update(0);
             }
         }
