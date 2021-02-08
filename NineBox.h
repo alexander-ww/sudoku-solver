@@ -7,7 +7,23 @@
 
 using namespace std;
 
-
+/**
+ * A nine box in a Sudoku puzzle.
+ *
+ * <p>
+ * The NineBox class provides a means
+ * to represent each of the larger
+ * boxes of nine single-boxes that
+ * exist in the Sudoku board.
+ * </p>
+ *
+ * <p>
+ * Each of these nine-boxes in the
+ * Sudoku board contain nine single
+ * boxes, a non-zero status indicator,
+ * and a vector of possibilities.
+ * </p>
+ */
 class NineBox {
 
     public:
