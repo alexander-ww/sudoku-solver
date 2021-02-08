@@ -917,15 +917,15 @@ void SudokuTable::solveTable() {
 
                     // iterate through possibilities in single-box
                     for (int k = 0; k < 9; k++) {
-                        if (nineBoxBoard[i].getSingleboxes()[j].getPossibilities()[k] == 0) {
+                        if (nineBoxBoard[i].getSingleBoxes()[j].getPossibilities()[k] == 0) {
                             zeroesCount++;
                         }
                         if (nineBoxBoard[i].getSingleBoxes()[j].getPossibilities()[k] != 0) {
                             if (passed == 1) {
-                                tempsecond = nineBoxBoard[i].getSingleBoxes()[j].getPossibilities()[k];
+                                tempSecond = nineBoxBoard[i].getSingleBoxes()[j].getPossibilities()[k];
                             }
                             if (passed == 0) {
-                                tempfirst = nineBoxBoard[i].getSingleBoxes()[j].getPossibilities()[k];
+                                tempFirst = nineBoxBoard[i].getSingleBoxes()[j].getPossibilities()[k];
                                 passed++;
                             }
                         }
