@@ -414,3 +414,12 @@ in the Sudoku table. This step is shown below.
 [{0, 0, 0, 0, 0, 0, 0, 0, 0}, {<b>0</b>, 0, 0, 0, 0, 6, 0, 0, 0}, {0, 0, 0, 0, 5, 6, 0, <b>0</b>, 0}]
 [{0, 2, 3, 4, 5, 0, 7, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 3, 0, 5, 0, 0, 0, <b>0</b>}]
 </pre>
+
+### Step 5: Check for Identified Values
+Now that a first round of all three checks for the Sudoku table has
+been performed, there should either be identified values to use for
+updating the table or a decision should need to be made to reduce
+possibilities. This step will show that possibilities exist for updating
+the Sudoku table with new values.
+
+
