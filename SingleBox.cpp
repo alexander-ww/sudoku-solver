@@ -23,7 +23,7 @@ SingleBox::SingleBox(int box, int value) {
     setStatus(false);
 
     for (int i = 1; i < 10; i++) {
-        this.possibilities.push_back(i);
+        this->possibilities.push_back(i);
     }
 
     if (value >= 1 && value <= 9) {
@@ -47,7 +47,7 @@ SingleBox::SingleBox(int box, int value) {
  * @param ninebox The associated nine-box.
  */
 void SingleBox::setBox(int ninebox) {
-    this.box = ninebox;
+    this->box = ninebox;
 }
 
 /**
@@ -63,7 +63,7 @@ void SingleBox::setBox(int ninebox) {
  * @param value The associated value.
  */
  void SingleBox::setValue(int value) {
-     this.value = value;
+     this->value = value;
  }
 
 /**
@@ -78,7 +78,7 @@ void SingleBox::setBox(int ninebox) {
  * @param complete The completion status.
  */
  void SingleBox::setStatus(bool complete) {
-     this.status = complete;
+     this->status = complete;
  }
  
  /**
@@ -93,7 +93,7 @@ void SingleBox::setBox(int ninebox) {
   * @return The completion status.
   */
  bool SingleBox::getStatus() {
-     return this.status;
+     return this->status;
  }
  
  /**
@@ -108,7 +108,7 @@ void SingleBox::setBox(int ninebox) {
   * @return The assigned value.
   */
  int SingleBox::getValue() {
-     return this.value;
+     return this->value;
  }
  
  /**
@@ -122,7 +122,7 @@ void SingleBox::setBox(int ninebox) {
   * @return The nine-box index.
   */
  int SingleBox::getBox() {
-     return this.box;
+     return this->box;
  }
  
  /**
@@ -275,7 +275,7 @@ void SingleBox::erasePossibility(int index) {
  *
  * @return True if equal; False otherwise.
  */
-bool SingleBox:isEqual(SingleBox singlebox) {
+bool SingleBox::isEqual(SingleBox singlebox) {
     bool samePossibilities = true;
 
     // determine if possibility vectors are the same
