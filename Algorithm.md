@@ -321,3 +321,11 @@ results from performing this row-reduction can be observed below.
 [{0, 0, 0, 0, 0, 0, 0, 0, 0}, {1, <b>0</b>, <b>0</b>, 0, 0, 6, <b>0</b>, 0, 0}, {0, 0, <b>0</b>, 0, 5, 6, 0, 8, <b>0</b>}]
 [{<b>0</b>, 2, 3, 4, 5, <b>0</b>, 7, <b>0</b>, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 3, 0, 5, <b>0</b>, 0, <b>0</b>, 9}]
 </pre>
+
+### Step 4: Reduce Possibilities with 9-Box Check
+Now that row and column checks have been performed, the next step is to
+reduce our possibilities by checking against the contents of each 9-box
+in the Sudoku table. This step is shown below.
+
+
+
