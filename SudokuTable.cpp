@@ -132,7 +132,7 @@ void SudokuTable::printRemaining() {
     
     for (int i = 0; i < nineBoxBoard.size(); i++) {
         for (int j = 0; j < 8; j++) {
-            if nineBoxBoard[i].getSingleBoxes()[j].getValue() == 0) {
+            if (nineBoxBoard[i].getSingleBoxes()[j].getValue() == 0) {
                 remaining++;
             }
         }
@@ -917,7 +917,7 @@ void SudokuTable::solveTable() {
 
                     // iterate through possibilities in single-box
                     for (int k = 0; k < 9; k++) {
-                        if (nineBoxBoard[i].getSboxes()[j].getPossibilities()[k] == 0) {
+                        if (nineBoxBoard[i].getSingleboxes()[j].getPossibilities()[k] == 0) {
                             zeroesCount++;
                         }
                         if (nineBoxBoard[i].getSingleBoxes()[j].getPossibilities()[k] != 0) {
@@ -933,7 +933,7 @@ void SudokuTable::solveTable() {
                     
                     // add only valid pairs to the list of pairs for each nine-box
                     if (zeroesCount == 7 ) {
-                        pairs.push_back(Pair(j, tempfirst, tempsecond));
+                        pairs.push_back(Pair(j, tempFirst, tempSecond));
                     }
                     
                     zeroesCount = 0;
