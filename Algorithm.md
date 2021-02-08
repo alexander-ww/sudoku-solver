@@ -509,3 +509,7 @@ the Sudoku table with new values.
 [{0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, <b>6</b>, 0, 0, 0}, {0, 0, 0, 0, 5, 6, 0, 0, 0}]
 [{0, 2, 3, 4, 5, 0, 7, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 3, 0, 5, 0, 0, 0, 0}]
 </pre>
+
+#### Summary for Step 5
+- In 9-box 4, the top-row and middle column has a value of 5
+- In 9-box 8, the middle-row and middle column has a value of 6 
