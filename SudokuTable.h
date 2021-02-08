@@ -6,6 +6,17 @@
 #include <iostream>
 #include "NineBox.h"
 
+using namespace std;
+
+/**
+ * A Sudoku table.
+ *
+ * <p>
+ * The SudokuTable class provides
+ * a means for representing a Sudoku
+ * table with all of its information.
+ * </p>
+ */
 class SudokuTable {
 
     public:
