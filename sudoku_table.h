@@ -45,7 +45,7 @@ class SudokuTable {
         vector< vector<int> > grid;
 
         // setup methods
-        void populate(vector<int> values);
+        void populate(vector<int> &values);
 };
 
 #endif

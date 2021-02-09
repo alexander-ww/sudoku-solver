@@ -1,3 +1,4 @@
+#include <string>
 #include "sudoku_table.h"
 
 const int MAXLINE = 18;
@@ -23,7 +24,7 @@ using namespace std;
 SudokuTable::SudokuTable(const char* input, const char* output) {
 
     // declare values
-    vector<int> values;
+    vector<int> values = vector<int>();
 
     // setup input file
     ifstream inFile(input);
@@ -32,9 +33,13 @@ SudokuTable::SudokuTable(const char* input, const char* output) {
     // read from input file
     while (inFile) {
         inFile.getline(line, MAXLINE);
-        for (int i = 0; i < MAXLINE - 1; i += 2) {
-            int value = line[i] - '0';
-            values.push_back(value);
+        if (inFile) {
+            for (int i = 0; i < MAXLINE - 1; i += 2) {
+                if (line[i] != '\0' && line[i] != '\n') {
+                    int value = line[i] - '0';
+                    values.push_back(value);
+                }
+            }
         }
     }
 
@@ -60,7 +65,7 @@ SudokuTable::SudokuTable(const char* input, const char* output) {
  *
  * @param value The provided values.
  */
-void SudokuTable::populate(vector<int> values) {
+void SudokuTable::populate(vector<int> &values) {
 
     // initialize row
     vector<int> row = vector<int>();
@@ -70,12 +75,16 @@ void SudokuTable::populate(vector<int> values) {
         if (i % 9 == 0) {
             if (i != 0) {
                 grid.push_back(row);
-                row.clear();
+                row = vector<int>();
             }
-            else {
-                row.push_back(values.at(i));
-            }
+            row.push_back(values.at(i));
         }
+        else {
+            row.push_back(values.at(i));
+        }
+    }
+    if (!row.empty()) {
+        grid.push_back(row);
     }
 }
 
@@ -203,15 +212,13 @@ void SudokuTable::print() {
         }
 
         // handle printing divider
-        if (row % 3 == 0) {
-            if (row != 0) {
-                cout << " -----   -----   ----- " << endl;
-            }
+        if ((row + 1) % 3 == 0 && row != grid.size() - 1) {
+            cout << " -----   -----   ----- " << endl;
         }
-
-        // print line separation
-        cout << endl;
     }
+
+    // print line separation
+    cout << endl;
 }
 
 /**
@@ -294,13 +301,11 @@ void SudokuTable::record() {
         }
 
         // handle printing divider
-        if (row % 3 == 0) {
-            if (row != 0) {
-                outFile << " -----   -----   ----- " << endl;
-            }
+        if ((row + 1) % 3 == 0 && row != grid.size() - 1) {
+            outFile << " -----   -----   ----- " << endl;
         }
-
-        // print line separation
-        outFile << endl;
     }
+
+    // print line separation
+    outFile << endl;
 }

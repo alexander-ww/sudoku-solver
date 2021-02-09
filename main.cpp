@@ -27,7 +27,7 @@ int main(int argc, const char* argv[]) {
 
     const char* input = argv[1];
     const char* output = argv[2];
-    
+
     SudokuTable table = SudokuTable(input, output);
     SudokuSolver solver = SudokuSolver();
 
